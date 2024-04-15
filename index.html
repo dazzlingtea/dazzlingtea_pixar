@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="./calpavi.png">
+	<title>Calendar</title>
+	<link rel="stylesheet" href="./css/header.css">
+	<link rel="stylesheet" href="./css/modal.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script type="module" src="./js/app.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<h1 class="logo">
+				<i class="fa-regular fa-calendar-days"></i>
+				캘린더
+			</h1>
+			<div class="wrapper">
+				<div class="date-wrapper">
+					<button class="today">오늘</button>
+					<span class="selected-date">2024년 4월 5일</span>
+				</div>
+				<div class="add-btn-wrapper">
+					<button class="add">
+						<i class="fa-solid fa-plus"></i>
+						<span>만들기</span>
+					</button>
+				</div>
+				<div class="setting-wrapper"></div>
+			</div>
+		</div>
+	</header>
+	<section id="main">
+		<section id="side">
+			<div class="user">
+				<div class="profile-box"></div>
+				<span>아바라</span>
+			</div>
+			<nav class="menu">
+				<ul>
+					<li><a href="./index.html"><i class="fas fa-border-all"></i>HOME</a></li>
+					<li><a href="./html/calendar.html"><i class="far fa-calendar-alt"></i>MONTHLY</a></li>
+					<li><a href="./html/todo.html"><i class="far fa-check-square"></i>TO-DOLIST</a></li>
+				</ul>
+			</nav>
+			<div class="timer">
+				<span class="current-time">00:00</span>
+				<div class="btn-wrapper">
+					<button class="start">시작</button>
+					<button class="stop">정지</button>
+				</div>
+			</div>
+		</section>
+		<section id="main-content">
+			<div class="container-1">
+				<div class="wrapper">
+					<div class="header">
+						<h2>To do List</h2>
+					</div>
+					<div class="todo-list">
+						<div class="box today">
+							<h3 class="title">
+								<span>오늘</span>
+							</h3>
+							<ul class="list">
+								<li class="checked">
+									<input type="checkbox" name="" id="">
+									<span>강아지 산책 시키기</span>
+								</li>
+								<li>
+									<input type="checkbox" name="" id="">
+									<span>꽃 구경 다녀오기</span>
+								</li>
+							</ul>
+						</div>
+						<div class="box tomorrow">
+							<h3 class="title">
+								<span>내일</span>
+							</h3>
+							<ul class="list">
+								<li class="">
+									<input type="checkbox" name="" id="">
+									<span>이불 빨래</span>
+								</li>
+								<li>
+									<input type="checkbox" name="" id="">
+									<span>수리점 방문</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper">
+					<div class="header">
+						<h2>Monthly</h2>
+					</div>
+					<div class="calendar">
+						<div class="box monthly">
+							<div class="header-calendar">
+								<!-- year-month 변수 처리 필요 -->
+								<div class="year-month">2024년 4월</div>
+								<!-- 캘린더 헤더 버튼 -->
+								<div class="nav-calendar">
+									<a href="#">
+										<button class="nav-btn go-prev">
+											<i class="fas fa-chevron-left"></i>
+										</button>
+									</a>
+									<a href="#"><button class="nav-btn go-today">오늘</button></a>
+									<a href="#">
+										<button class="nav-btn go-next">
+											<i class="fas fa-chevron-right"></i>
+										</button>
+									</a>
+								</div>
+							</div>
+							<div class="main-calendar">
+								<!-- 캘린더 요일 -->
+								<div class="days-container">
+									<div class="days">일</div>
+									<div class="days">월</div>
+									<div class="days">화</div>
+									<div class="days">수</div>
+									<div class="days">목</div>
+									<div class="days">금</div>
+									<div class="days">토</div>
+								</div>
+								<!-- 캘린더 날짜 (동적) -->
+								<div class="date-container">
+									<!--<div class="date-box"><span class="date-text">1</span></div>
+								  <div class="date-box"><span class="date-text">2</span></div>
+								  <div class="date-box"><span class="date-text">3</span></div>
+								  <div class="date-box"><span class="date-text">4</span></div>
+								  <div class="date-box">
+									<span class="date-text circle">5</span>
+								  </div>
+								  <div class="date-box"><span class="date-text">6</span></div>
+								  <div class="date-box"><span class="date-text">7</span></div>-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="container-2">
+				<div class="wrapper">
+					<div class="header">
+						<h2>Weekly</h2>
+					</div>
+					<div class="weekly">
+						<div class="main-calendar">
+							<!-- 캘린더 요일 -->
+							<div class="days-container">
+								<div class="days">일</div>
+								<div class="days">월</div>
+								<div class="days">화</div>
+								<div class="days">수</div>
+								<div class="days">목</div>
+								<div class="days">금</div>
+								<div class="days">토</div>
+							</div>
+							<!-- 캘린더 날짜 (동적) -->
+							<div class="date-container weekly">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<footer>
+	</footer>
+	<div class="modal-overlay hidden">
+		<div class="modal-content">
+			<button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+			<form action="" class="todo-save">
+				<h2>할일 등록</h2>
+				<div class="wrapper descript">
+					<i class="fa-regular fa-circle-check"></i>
+					<div class="txt-wrapper">
+						<textarea class="txt-field" placeholder="할일 입력" wrap="soft" style="height: 51px;"></textarea>
+						<div class="txt-len-info">
+							<span>0/1000</span>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper time">
+					<i class="fa-regular fa-clock"></i>
+					<div class="dropdown select-time">
+						<button class="btn time-btn">기한 없음</button>
+						<div id="drop-content" class="content-calendar">
+							<div class="monthly">
+								<div class="header-calendar">
+									<!-- year-month 변수 처리 필요 -->
+									<!-- 캘린더 헤더 버튼 -->
+									<div class="nav-calendar">
+										<a href="#">
+											<button class="nav-btn go-prev">
+												<i class="fas fa-chevron-left"></i>
+											</button>
+										</a>
+										<span class="year-month">2024년 4월</span>
+										<a href="#">
+											<button class="nav-btn go-next">
+												<i class="fas fa-chevron-right"></i>
+											</button>
+										</a>
+									</div>
+								</div>
+								<div class="main-calendar">
+									<!-- 캘린더 요일 -->
+									<div class="days-container">
+										<div class="days">일</div>
+										<div class="days">월</div>
+										<div class="days">화</div>
+										<div class="days">수</div>
+										<div class="days">목</div>
+										<div class="days">금</div>
+										<div class="days">토</div>
+									</div>
+									<!-- 캘린더 날짜 (동적) -->
+									<div class="date-container">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper repeat">
+					<i class="fa-solid fa-repeat"></i>
+					<div class="dropdown select-repeat">
+						<button class="btn repeat-btn">반복 안함</button>
+						<div id="drop-content" class="content-repeat">
+							<a href='#' class="repeat-option">반복 안함</a>
+							<a href='#' class="repeat-option">매일</a>
+							<a href='#' class="repeat-option">매주</a>
+							<a href='#' class="repeat-option">매월</a>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper-btn">
+					<button class="save">저장</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
